@@ -1,0 +1,18 @@
+.btn-post{
+    margin-right: 10px;
+}
+
+
+.btn-container{
+    margin-left: 320px;
+}
+
+.btn-ch{
+    padding: 7px;
+    border-radius: 0.1;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/509c179d58.js" crossorigin="anonymous"></script>
+    <title>Ig-frame</title>
+</head>
+<body>
+   <!--inicia la barra de navegacion  -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <ul class="navbar-nav"></ul>
+        <i class="fa-brands fa-instagram"></i>
+        Instagram
+      </a>
+      <!-- Boton de apertura al modal -->
+      <button class="btn btn-success ms-auto btn-post" data-bs-toggle="modal" data-bs-target="#NewPost">Create a New Post</button>
+      <!-- Modal New Post -->
+      <div class="modal fade" id="NewPost" tabindex="-1" aria-labelledby="NewPostModal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="NewPost">Create a New Post</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Inicio del form con label y text area -->
+            <div class="modal-body">
+              <label for="Caption_post" class="form-label">Caption:</label><br>
+              <textarea class="form-control" name="Captionhere" id="CPhere" cols="60" rows="2" placeholder="Add the caption of your post here"></textarea><br>
+              <button class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
+              <button class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
+              <hr>
+              <div class="btn-container">
+                <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                <button class="btn btn-success">Publish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin del Modal -->
+
+      <!-- Inicio del Dropdown con el Gear -->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Accesibility</a></li>
+          <li><a class="dropdown-item" href="#">Privacy And Data</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Fin de la barra de navegacion -->
+  
+  <nav>
+    <div class="nav nav-tabs d-flex justify-content-center mt-4" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-feed-tab" data-bs-toggle="tab" data-bs-target="#nav-feed" aria-controls="nav-feed" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-feed" role="tabpanel" aria-labelledby="nav-feed-tab" tabindex="0">
+      <!--contenido de las imagenes-->
+
+      <div class="container-fluid pt-4">
+        <div class="row  pt-2">
+          <div class="col-4"><img src="https://cdn.pixabay.com/photo/2017/03/06/15/32/jesus-2121771_1280.jpg" width="102%" height="100%" alt=""></div>
+          <div class="col-4"><img src="https://cdn.pixabay.com/photo/2020/11/01/13/45/jesus-5703825_1280.jpg" width="102%" height="100%" alt=""></div>
+          <div class="col-4"><img src="https://cdn.pixabay.com/photo/2019/01/25/09/34/mary-3954031_1280.jpg" width="102%" height="100%" alt=""></div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-4"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" width="102%" height="100%" alt=""></div>
+          <div class="col-4"><img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_1280.jpg" width="102%" height="100%" alt=""></div>
+          <div class="col-4"><img src="https://cdn.pixabay.com/photo/2019/07/01/18/11/stained-glass-4310586_1280.jpg" width="102%" height="100%" alt=""></div>
+        </div>
+        <div class="row  pt-2">
+          <div class="col-4"><img src="https://cdn.pixabay.com/photo/2017/05/12/08/29/coffee-2306471_1280.jpg" width="102%" height="100%" alt=""></div>
+          <div class="col-4"><img src="https://cdn.pixabay.com/photo/2018/03/26/19/49/food-3263812_640.jpg" width="102%" height="100%" alt=""></div>
+          <div class="col-4"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Bandera_de_la_Liga_Deportiva_Alajuelense.jpg" width="102%" height="100%" alt=""></div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+      <!--contenido de las individualmente  -->
+      <div class="card mx-auto mt-4 " style="width: 30rem;">
+        <div class="card-header">
+          <div class="card-text d-flex justify-content-between">
+            <h5 class="card-title">Jesus Eucaristia</h5>
+            <p class="card-text">08/26</p>
+          </div>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2017/03/06/15/32/jesus-2121771_1280.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><strong>204 Likes</strong></p>
+          <p class="card-text">Para siempre sea alabado mi Jesus Sacramentado, En el cielo y en la tierra vuestro nombre sea alabado!</p>
+          
+        </div>
+      </div>
+      <div class="card mx-auto mt-4 " style="width: 30rem;">
+        <div class="card-header">
+          <div class="card-text d-flex justify-content-between">
+            <h5 class="card-title">@sersanto_</h5>
+            <p class="card-text">08/27</p>
+          </div>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2020/11/01/13/45/jesus-5703825_1280.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><strong>105 Likes</strong></p>
+          <p class="card-text">Por tu Cruz y Resurreccion nos has salvado Señor</p>
+          
+        </div>
+      </div>
+      <div class="card mx-auto mt-4 " style="width: 30rem;">
+        <div class="card-header">
+          <div class="card-text d-flex justify-content-between">
+            <h5 class="card-title">Maria, Madre de Dios y Madre Nuestra</h5>
+            <p class="card-text">08/26</p>
+          </div>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2019/01/25/09/34/mary-3954031_1280.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><strong>200 Likes</strong></p>
+          <p class="card-text">Oh María madre mía, Oh consuelo del mortal, amparadme y guiadme a la Patria Celestial!</p>
+          
+        </div>
+      </div>
+      <div class="card mx-auto mt-4 " style="width: 30rem;">
+        <div class="card-header">
+          <div class="card-text d-flex justify-content-between">
+            <h5 class="card-title">Atardecer espectacular</h5>
+            <p class="card-text">08/26</p>
+          </div>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><strong>300 Likes</strong></p>
+          <p class="card-text">Me parecio muy bonito este atardecer obra del Creador!</p>
+        </div>
+      </div>
+
+      <div class="card mx-auto mt-4 " style="width: 30rem;">
+        <div class="card-header">
+          <div class="card-text d-flex justify-content-between">
+            <h5 class="card-title">Bosque Pacifico</h5>
+            <p class="card-text">08/26</p>
+          </div>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_1280.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><strong>204 Likes</strong></p>
+          <p class="card-text">Cuanta paz podemos encontrar en el silencio del Corazon y escuchando esa voz que nos llama a seguirlo!</p>
+          
+        </div>
+      </div>
+
+      <div class="card mx-auto mt-4 " style="width: 30rem;">
+        <div class="card-header">
+          <div class="card-text d-flex justify-content-between">
+            <h5 class="card-title">San Pedro</h5>
+            <p class="card-text">08/19</p>
+          </div>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2019/07/01/18/11/stained-glass-4310586_1280.jpg
+        " class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><strong>204 Likes</strong></p>
+          <p class="card-text">Apostol directo de Cristo, es decir de los primeros elegidos y el primer Papa de la Iglesia Católica!</p>
+          
+        </div>
+      </div>
+
+      <div class="card mx-auto mt-4 " style="width: 30rem;">
+        <div class="card-header">
+          <div class="card-text d-flex justify-content-between">
+            <h5 class="card-title">Tarde Poetica</h5>
+            <p class="card-text">08/21</p>
+          </div>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2017/05/12/08/29/coffee-2306471_1280.jpg
+        " class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><strong>204 Likes</strong></p>
+          <p class="card-text">Hay una conexion especial del corazón con la mano, tomate un cafe contigo mismo y conocete!</p>
+          
+        </div>
+      </div>
+
+      <div class="card mx-auto mt-4 " style="width: 30rem;">
+        <div class="card-header">
+          <div class="card-text d-flex justify-content-between">
+            <h5 class="card-title">Real Madrid</h5>
+            <p class="card-text">08/26</p>
+          </div>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2018/03/26/19/49/food-3263812_640.jpg
+        " class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><strong>400 Likes</strong></p>
+          <p class="card-text">Se viene la champions #15!</p>
+          
+        </div>
+      </div>
+
+      <div class="card mx-auto mt-4 " style="width: 30rem;">
+        <div class="card-header">
+          <div class="card-text d-flex justify-content-between">
+            <h5 class="card-title">@alajuelense_oficial</h5>
+            <p class="card-text">08/10</p>
+          </div>
+        </div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Bandera_de_la_Liga_Deportiva_Alajuelense.jpg
+        " class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><strong>305 Likes</strong></p>
+          <p class="card-text">El amor por este equipo es inexplicable!</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+</body>
+</html>
+
+
+
+
+
+
